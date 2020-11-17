@@ -1,0 +1,6 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed ? "[✔]" : "[X]" %></p>
+<%= link_to "edit", edit_task_url(@task) %>
+<%=%>
+<a href="http://localhost:3000/tasks">Back to List</a>

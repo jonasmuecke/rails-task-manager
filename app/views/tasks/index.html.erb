@@ -1,0 +1,8 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <li><a href=<%="http://localhost:3000/tasks/#{task[:id]}"%>><%= task.title%> <%= task.completed ? "[✔]" : "[X]" %></li>
+    <%= link_to "delete task", delete_task_url(task), method: :delete, data: { confirm: "are you sure?"} %>
+  <% end %>
+</ul>
+
+<a href="http://localhost:3000/tasks/new">+ Add new Task</a>
